@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hjac01/FriendFinder/issues"
   },
-  "homepage": "https://github.com/hjac01/FriendFinder#readme"
+  "homepage": "https://github.com/hjac01/FriendFinder#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2"
+  }
 }
