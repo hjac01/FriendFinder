@@ -18,7 +18,7 @@
 
     <div class= "container">
             <div class="jumbotron">
-                    <h1 class="text-center"><i class="far fa-address-book"></i> Friend Finder</h1>
+                    <h1 class="text-center"> Friend Finder</h1>
                     <hr>
                     <h2 class="text-center">Survey Questions</h2>
                     <br>
@@ -204,17 +204,37 @@
               
                   <footer class="footer">
                     <div class="container">
-                      <p>
-                        <a href="/api/tables">API Table Link</a> |
-                        <a href="/api/waitlist">API Wait List</a>
+                      <p><a href="/api/friends">API Friends List</a> | <a href="https://hjac01.github.io/FriendFinder/">GitHub Repo</a>
                     </div>
                   </footer>
+                  
+                  </div>
               
                 </div>
     </div>
+
+    <!-- <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 </body>
-</html>
+</html> -->
 
 <script type="text/javascript">
 
@@ -238,18 +258,42 @@ var surveyAnswers = {
     scores: [
       question1, question2, question3, question4, question5, question6, question7, question8, question9, question10
     ]
-    
+   
 };
 console.log(surveyAnswers);
+
+
+
+
 
 // Callback
 $.post("/api/friends", surveyAnswers, function () {
     console.log("survey submitted");
 
-})
+// }).done(function() {
+// 			// calls friends api
+// 			$.ajax({
+// 					url: "/api/friends",
+// 					method: "GET",
+// 					datatype: 'json'
+// 			}).done(function(res, err) {
+// 				if(err) {
+// 					console.log(err);
+// 				}
+// 				// console.log(res);
+// 				var current = res[res.length-1];
+// 				// console.log(current);
+// 				// stores new user's best match and displays to modal
+// 				var bestFriend = surveyAnswers;
+// 				console.log(bestFriend);
+// 				$("#name").text("Hi " + current.name + ", my name is " + bestFriend.name + "!");
+// 				$("img#friend-photo").attr("src", bestFriend.photo);
+// 			});
+// 		});
    
+    });
 
-});
-
+  
 
 </script>
+
