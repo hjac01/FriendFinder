@@ -1,23 +1,18 @@
 {
-  "name": "FriendFinder",
+  "name": "friendfinder",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hjac01/FriendFinder.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hjac01/FriendFinder/issues"
-  },
-  "homepage": "https://github.com/hjac01/FriendFinder#readme",
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2"
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
