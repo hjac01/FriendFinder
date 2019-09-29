@@ -34,7 +34,7 @@ var friendArray = [
     },
     {
       "name": "Michael Scott",
-      "photo": "https://c8.alamy.com/comp/F42EJ0/french-guy-with-beret-holding-baguettes-F42EJ0.jpg",
+      "photo": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjAr9Kd2vbkAhUSJzQIHeYAAwkQjRx6BAgBEAQ&url=https%3A%2F%2Ftheoffice.fandom.com%2Fwiki%2FMichael_Scott&psig=AOvVaw09_2aRo1QrYQJqW8su26vK&ust=1569869618895497",
       "scores": [
       "1",
       "1",
