@@ -18,7 +18,7 @@ var friendArray = [
 
   {
     "name": "Jacob Deming",
-    "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+    "photo": "https://c8.alamy.com/comp/F42EJ0/french-guy-with-beret-holding-baguettes-F42EJ0.jpg",
     "scores": [
     "4",
     "2",
@@ -32,6 +32,22 @@ var friendArray = [
     "2"
     ]
     },
+    {
+      "name": "Michael Scott",
+      "photo": "https://c8.alamy.com/comp/F42EJ0/french-guy-with-beret-holding-baguettes-F42EJ0.jpg",
+      "scores": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+      ]
+      },
 
     {
       "name": "Jeremiah Scanlon",

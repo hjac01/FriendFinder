@@ -10,10 +10,10 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    // console.log(req.body);
+    console.log(req.body);
     // console.log(friendData);
 
-    var myScores = [5, 1, 4, 4, 5, 1, 2, 5, 4, 1];
+    
     var bestFriend = {
       name: "",
       photo: "",
@@ -21,20 +21,22 @@ module.exports = function(app) {
     };
 
     for (var i = 0; i < friendArray.length; i++) {
-      var totalDifference = 100;
+      var totalDifference = 0;
+      console.log("inside loop")
       for (var j = 0; j < friendArray[i].scores.length; j++) {
         var a = friendArray[i].scores[j];
-        var b = myScores[j];
+        var b = req.body.scores[j];
         totalDifference += Math.abs(parseInt(a) - b);
       }
       if (totalDifference < bestFriend.diff) {
         bestFriend.name = friendArray[i].name;
         bestFriend.photo = friendArray[i].photo;
         bestFriend.diff = totalDifference;
-        friendData.push(req.body);
-        res.json(true);
+        // friendData.push(req.body);
+        
       }
     }
-    console.log(bestFriend);
+    console.log(bestFriend)
+    res.json(bestFriend)
   });
 };

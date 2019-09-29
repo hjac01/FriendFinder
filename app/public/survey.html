@@ -196,6 +196,7 @@
                                            
                                             <button type="submit" class="btn btn-primary submit">Submit</button>
                           </form>
+                          <div id="results"></div>
                         
                       </div>
                     </div>
@@ -213,28 +214,7 @@
                 </div>
     </div>
 
-    <!-- <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-</body>
-</html> -->
+   
 
 <script type="text/javascript">
 
@@ -267,33 +247,20 @@ console.log(surveyAnswers);
 
 
 // Callback
-$.post("/api/friends", surveyAnswers, function () {
+$.post("/api/friends", surveyAnswers, function (data) {
     console.log("survey submitted");
+    console.log(data)
+    $("#results").append("<h2>"+ data.name + "</h2>")
+    $("#results").append(`<img src= '${data.photo}'/>`)
 
-// }).done(function() {
-// 			// calls friends api
-// 			$.ajax({
-// 					url: "/api/friends",
-// 					method: "GET",
-// 					datatype: 'json'
-// 			}).done(function(res, err) {
-// 				if(err) {
-// 					console.log(err);
-// 				}
-// 				// console.log(res);
-// 				var current = res[res.length-1];
-// 				// console.log(current);
-// 				// stores new user's best match and displays to modal
-// 				var bestFriend = surveyAnswers;
-// 				console.log(bestFriend);
-// 				$("#name").text("Hi " + current.name + ", my name is " + bestFriend.name + "!");
-// 				$("img#friend-photo").attr("src", bestFriend.photo);
-// 			});
-// 		});
-   
+    // $("#results").append(`<h3>check out ${data.name}'s photo: <a href = "${data.photo}"> here</a>`)
+
+
     });
 
   
-
+  });
 </script>
 
+</body>
+</html>
